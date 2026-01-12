@@ -167,11 +167,13 @@ section{
 
 /* FILTER LOGIC */
 .book{display:block;}
+#all:checked ~ .books .books .book{display:block;}
 #horor:checked ~ .books .book:not(.horor){display:none;}
-#fiksi:checked ~ .books .book:not(.fiksi){display:none;}
+#fiksi:checked ~ .books .book:not(.fiction){display:none;}
 #teen:checked ~ .books .book:not(.teen){display:none;}
 #self:checked ~ .books .book:not(.self){display:none;}
 #sejarah:checked ~ .books .book:not(.sejarah){display:none;}
+#novel:checked ~ .books .book:not(.novel){display:none;}
 
 /* FOOTER */
 footer{
@@ -241,7 +243,7 @@ footer{
 <input type="radio" name="genre" id="horor">
 <input type="radio" name="genre" id="fiction">
 <input type="radio" name="genre" id="teen">
-<input type="radio" name="genre" id="self improvement">
+<input type="radio" name="genre" id="self">
 <input type="radio" name="genre" id="sejarah">
 <input type="radio" name="genre" id="novel">
 
@@ -250,7 +252,7 @@ footer{
 <label for="horor">Horor</label>
 <label for="fiction">Fiction</label>
 <label for="teen">Teen Fiction</label>
-<label for="self improvement">Self Improvement</label>
+<label for="self">Self Improvement</label>
 <label for="sejarah">Sejarah</label>
 <label for="novel">Novel</label>
 </div>
@@ -264,8 +266,8 @@ footer{
 <div class="book teen"><img src="My Best Enemy.jpeg"><p>MY BEST ENEMY</p></div>
 <div class="book teen"><img src="Ardhan.jpeg"><p>ARDHAN</p></div>
 <div class="book teen"><img src="From G to N.jpeg"><p>FROM G to N</p></div>
-<div class="book self improvement"><img src="Things Left Behind.jpeg"><p>THINGS LEFT BEHIND</p></div>
-<div class="book self improvement"><img src="Semua Boleh Pergi Kecuali Ibu.jpeg"><p>SEMUA BOLEH PERGI, KECUALI IBU</p></div>
+<div class="book self"><img src="Things Left Behind.jpeg"><p>THINGS LEFT BEHIND</p></div>
+<div class="book self"><img src="Semua Boleh Pergi Kecuali Ibu.jpeg"><p>SEMUA BOLEH PERGI, KECUALI IBU</p></div>
 <div class="book sejarah"><img src="Sejarah Dunia Yang Disembunyikan.jpeg"><p>SEJARAH DUNIA YANG DISEMBUNYIKAN</p></div>
 <div class="book novel"><img src="Gibran Dirgantara.jpeg"><p>GIBRAN DIRGANTARA</p></div>
 <div class="book novel"><img src="With You.jpeg"><p>WITH YOU</p></div>
@@ -291,5 +293,6 @@ footer{
 
 </body>
 </html>
+
 
 
