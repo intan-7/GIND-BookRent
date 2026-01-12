@@ -146,11 +146,13 @@ section{
 /* BOOKS */
 .books{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  grid-template-columns:repeat(auto-fill, 180px);
   gap:25px;
+  justify-conter:center;
 }
 
 .book{
+  width:180px
   background:white;
   padding:15px;
   border-radius:15px;
@@ -169,7 +171,7 @@ section{
 .book{display:block;}
 #all:checked ~ .books .books .book{display:block;}
 #horor:checked ~ .books .book:not(.horor){display:none;}
-#fition:checked ~ .books .book:not(.fiction){display:none;}
+#fiction:checked ~ .books .book:not(.fiction){display:none;}
 #teen:checked ~ .books .book:not(.teen){display:none;}
 #self:checked ~ .books .book:not(.self){display:none;}
 #sejarah:checked ~ .books .book:not(.sejarah){display:none;}
@@ -293,6 +295,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
