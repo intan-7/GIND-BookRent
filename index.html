@@ -148,11 +148,11 @@ section{
   display:grid;
   grid-template-columns:repeat(auto-fill, 180px);
   gap:25px;
-  justify-conter:center;
+  justify-content:center;
 }
 
 .book{
-  width:180px
+  width:180px;
   background:white;
   padding:15px;
   border-radius:15px;
@@ -169,7 +169,7 @@ section{
 
 /* FILTER LOGIC */
 .book{display:block;}
-#all:checked ~ .books .books .book{display:block;}
+#all:checked ~ .books .book{display:block;}
 #horor:checked ~ .books .book:not(.horor){display:none;}
 #fiction:checked ~ .books .book:not(.fiction){display:none;}
 #teen:checked ~ .books .book:not(.teen){display:none;}
@@ -295,6 +295,7 @@ footer{
 
 </body>
 </html>
+
 
 
 
