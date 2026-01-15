@@ -200,6 +200,75 @@ section{
 #sejarah:checked ~ .books .book:not(.sejarah){display:none;}
 #novel:checked ~ .books .book:not(.novel){display:none;}
 
+/* FORM SEWA */
+#form-sewa form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+#form-sewa label{
+  font-weight:600;
+  font-size:14px;
+}
+
+#form-sewa input,
+#form-sewa select,
+#form-sewa textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:14px;
+}
+
+#form-sewa textarea{
+  resize:none;
+  height:100px;
+}
+
+#form-sewa button{
+  grid-column:span 2;
+  border:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  #form-sewa form{
+    grid-template-columns:1fr;
+  }
+
+  #form-sewa button{
+    grid-column:span 1;
+  }
+}
+
+.contact-box{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:30px;
+}
+
+.contact-item{
+  background:white;
+  padding:20px 30px;
+  border-radius:20px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.contact-item:hover{
+  transform:translateY(-5px);
+}
+
+
 /* FOOTER */
 footer{
   background:var(--brown);
@@ -651,33 +720,47 @@ Gaji? Cukup, cukup besar. Karier? Mulus melesat. Bisnis? Sebentar lagi soft laun
 
 <div class="policy">
 <form onsubmit="kirimWA(); return false;">
-  <label>Nama</label><br>
-  <input type="text" id="nama" required><br><br>
 
-  <label>Judul Buku</label><br>
-  <input type="text" id="judul" readonly><br><br>
+  <div>
+    <label>Nama</label>
+    <input type="text" id="nama" required>
+  </div>
 
-  <label>Durasi Sewa</label><br>
-  <select id="durasi" onchange="hitungHarga()" required>
-    <option value="">-- Pilih Durasi --</option>
-    <option value="7">7 Hari</option>
-    <option value="10">10 Hari</option>
-    <option value="14">14 Hari</option>
-  </select><br><br>
+  <div>
+    <label>Judul Buku</label>
+    <input type="text" id="judul" readonly>
+  </div>
 
-  <label>Harga</label><br>
-  <input type="text" id="harga" readonly><br><br>
+  <div>
+    <label>Durasi Sewa</label>
+    <select id="durasi" onchange="hitungHarga()" required>
+      <option value="">-- Pilih Durasi --</option>
+      <option value="7">7 Hari</option>
+      <option value="10">10 Hari</option>
+      <option value="14">14 Hari</option>
+    </select>
+  </div>
 
-  <label>Alamat</label><br>
-  <textarea id="alamat" required></textarea><br><br>
+  <div>
+    <label>Harga</label>
+    <input type="text" id="harga" readonly>
+  </div>
 
-  <label>Metode</label><br>
-  <select id="metode">
-    <option>Ambil</option>
-    <option>Antar</option>
-  </select><br><br>
+  <div>
+    <label>Alamat</label>
+    <textarea id="alamat" required></textarea>
+  </div>
+
+  <div>
+    <label>Metode</label>
+    <select id="metode">
+      <option>Ambil</option>
+      <option>Antar</option>
+    </select>
+  </div>
 
   <button class="btn" type="submit">Kirim ke WhatsApp</button>
+
 </form>
 </div>
 </section>
@@ -753,9 +836,23 @@ Metode: ${metode}`;
 </section>
 
 <section id="kontak">
-<h2>Kontak</h2>
-<p>WhatsApp: 085260877449</p>
-<p>Instagram: @gindbookrent</p>
+<h2>Kontak Kami</h2>
+
+<div class="contact-box">
+
+  <a class="contact-item" 
+     href="https://wa.me/6285260877449" 
+     target="_blank">
+    📱 WhatsApp
+  </a>
+
+  <a class="contact-item" 
+     href="https://www.facebook.com/share/1NBqmELqp7/" 
+     target="_blank">
+    📸 Facebook
+  </a>
+
+</div>
 </section>
 
 <footer>
